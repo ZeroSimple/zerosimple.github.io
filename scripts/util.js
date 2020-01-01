@@ -4,7 +4,6 @@
 define('util', [], function() {
   'use strict'
 
-  var WEATH_KEY = 'WEATH'
   var STORAGE_INSTANCE = undefined
   var DEFAULT_EXPIRE = 3 * 60 * 60 * 1000 // 默认过期时间3小时
 
@@ -78,51 +77,31 @@ define('util', [], function() {
   })()
 
   /**
-   * 天气模块
+   * 消抖
+   * 当调用函数n秒后，才会执行该动作，若在这n秒内又调用该函数则将取消前一次并重新计算执行时间
+   * @param {*} fn
+   * @param {*} delay
    */
-  var WEATH = (function() {
-    function getWeath() {
-      var weathData = STORAGE.getInstance().get(WEATH_KEY)
+  function debounce(fn, delay) {
+    let _this = this,
+      timer = null
 
-      var appid = (THEME_CONFIG.weather && THEME_CONFIG.weather.appid) || undefined
-      var appsecret = (THEME_CONFIG.weather && THEME_CONFIG.weather.appsecret) || undefined
-
-      if (weathData) {
-        return Promise.resolve(weathData)
-      } else if (appid && appsecret) {
-        return new Promise((resolve, reject) => {
-          fetch(
-            `https://www.tianqiapi.com/api/?appid=${appid}&appsecret=${appsecret}&version=v1`
-          ).then(
-            data => {
-              if (data.ok) {
-                data.json().then(resp => {
-                  if (resp) {
-                    STORAGE.getInstance().set(WEATH_KEY, resp)
-                    return resolve(resp)
-                  } else {
-                    return reject()
-                  }
-                })
-              } else {
-                return reject()
-              }
-            },
-            e => {
-              return reject(e)
-            }
-          )
-        })
+    return function(e) {
+      if (timer) {
+        clearTimeout(timer)
+        timer = setTimeout(function() {
+          fn.call(_this, e.target.value)
+        }, delay)
+      } else {
+        timer = setTimeout(function() {
+          fn.call(_this, e.target.value)
+        }, delay)
       }
     }
-
-    return {
-      getWeath: getWeath
-    }
-  })()
+  }
 
   return {
-    WEATH: WEATH,
-    STORAGE: STORAGE
+    STORAGE: STORAGE,
+    debounce: debounce
   }
 })

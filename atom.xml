@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ZeroSimple的小站</title>
+  <icon>https://blog.hee.ink/icon.png</icon>
+  <subtitle>日常摸鱼的蒟蒻</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.hee.ink/"/>
+  <updated>2018-12-31T14:50:25.000Z</updated>
+  <id>https://blog.hee.ink/</id>
+  
+  <author>
+    <name>ZeroSimple</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈2018年国内安卓手机生态</title>
+    <link href="https://blog.hee.ink/2018/12/31/%E6%B5%85%E8%B0%882018%E5%B9%B4%E5%9B%BD%E5%86%85%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E7%94%9F%E6%80%81/"/>
+    <id>https://blog.hee.ink/2018/12/31/%E6%B5%85%E8%B0%882018%E5%B9%B4%E5%9B%BD%E5%86%85%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E7%94%9F%E6%80%81/</id>
+    <published>2018-12-31T14:50:25.000Z</published>
+    <updated>2018-12-31T14:50:25.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;2018年就要画上句号了。有人说，这是极不平常的一年，因为老天对世人太不公了，竟招了这么多创造者或是伟人回去。&lt;/p&gt;
+&lt;p&gt;但对于国内安卓生态的发展，2018是极具革命性的一年。&lt;/p&gt;
+&lt;p&gt;2018，国内安卓设备百花齐放，在创新路上披荆斩棘，创新领跑世界。&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flash——早该覆灭的王朝</title>
+    <link href="https://blog.hee.ink/2018/07/17/Flash%E2%80%94%E2%80%94%E6%97%A9%E8%AF%A5%E8%A6%86%E7%81%AD%E7%9A%84%E7%8E%8B%E6%9C%9D/"/>
+    <id>https://blog.hee.ink/2018/07/17/Flash%E2%80%94%E2%80%94%E6%97%A9%E8%AF%A5%E8%A6%86%E7%81%AD%E7%9A%84%E7%8E%8B%E6%9C%9D/</id>
+    <published>2018-07-17T12:50:25.000Z</published>
+    <updated>2018-07-17T12:50:25.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Flash Player是一个耳熟能详的名字。1997年问世Flash陪伴着一代网民的成长，这其中就包括了00后的我。Flash由著名公司Adobe运营并开发，内置了脚本语言AS，由于其使用矢量图形实现数据最小化，在低速互联网时代成为了开发互联网应用程序、视频音频的绝佳工具
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>

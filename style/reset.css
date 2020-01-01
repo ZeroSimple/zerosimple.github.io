@@ -121,20 +121,18 @@ table {
 html,
 body {
   width: 100%;
-  min-height: 100%;
-  font-family: 'PingFang SC YouYuan Microsoft Yahei';
+  height: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   box-sizing: border-box;
+  background-color: #fff;
+  font-family: 'Varela', 'Microsoft Yahei';
 }
 a {
   text-decoration: none;
   transition: all 0.2s;
   font-weight: normal;
-  color: #898989;
-}
-a:hover {
-  color: #3273dc;
+  color: #333;
 }
 .module-cmt-list {
   display: none !important;
@@ -159,7 +157,14 @@ a:hover {
 }
 .iconfont {
   color: #787878;
-  margin-top: -0.1rem;
-  font-size: 1.2rem !important;
+  margin-top: -1px;
+  font-size: 1rem !important;
   padding: 0 0.2rem;
+}
+::-webkit-scrollbar {
+  width: 0rem;
+}
+::selection {
+  color: #333;
+  background: #bbdefb;
 }
