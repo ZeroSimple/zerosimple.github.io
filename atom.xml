@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Eternal memory</title>
+  <title>Eternal digital memory - 永恒的数字记忆</title>
   <icon>https://www.hee.ink/icon.png</icon>
-  <subtitle>Digital Evergarden</subtitle>
+  <subtitle>Digital Evergarden - 数字永恒花园 | ZeroSimple的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hee.ink/"/>
