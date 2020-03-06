@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <script>
+  ;(function(w, d, s, l, i) {
+    w[l] = w[l] || []
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : ''
+    j.async = true
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+    f.parentNode.insertBefore(j, f)
+  })(window, document, 'script', 'dataLayer', '98690481-2')
+</script>  <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?821b1114243d52ba72755a81b371d79b'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> <meta name="google-site-verification" content="HmxPDdh4W2o-EuHYEFLwnrwQvwPQ2M8YqJIB5N2eN0U">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content>
+    <meta name="description" content="Save digital memory forever 永远保存数字记忆。这里有Android生态的小杂谈，这里有我关于互联网的小笔记，折腾不止；当然也有ACG。">
+    
+    <title>
+      域前置（Domain fronting）傻瓜教程 - Eternal digital memory - 永恒的数字记忆
+    </title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/style/style.css">
+  <link rel="alternate" href="/atom.xml" title="Eternal digital memory - 永恒的数字记忆" type="application/atom+xml">
+</head>
+  <body>
+    <canvas id="pagemap"></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">详细步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">鸣谢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">更多</span></a></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search">
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg">
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class>
+          Home
+        </a>
+        
+        <a href="/archives" class>
+          Archives
+        </a>
+        
+        <a href="/about" class>
+          About
+        </a>
+        
+        <a href="https://d.hee.ink" class>
+          Download
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author">ZeroSimple</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">ZeroSimple</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class>
+            Home
+          </a>
+          
+          <a href="/archives" class>
+            Archives
+          </a>
+          
+          <a href="/about" class>
+            About
+          </a>
+          
+          <a href="https://d.hee.ink" class>
+            Download
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://twitter.com/ZeroSimpleKa" target="_block">
+              <span class="iconfont icon-twitter"></span>
+            </a>
+            
+            <a href="https://www.zhihu.com/people/zerosimple" target="_block">
+              <span class="iconfont icon-zhihu"></span>
+            </a>
+            
+            <a href="https://github.com/ZeroSimple" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+        <div class="top">
+          <div class="iconfont icon-zuirehotxiankuang animated infinite heartBeat"></div>
+        </div>
+      
+      <div class="title">域前置（Domain fronting）傻瓜教程</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2020/03/06</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2020/03/06/域前置（Domain-fronting）傻瓜教程/" data-flag-title="域前置（Domain fronting）傻瓜教程">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/教程">教程</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <p>众所周知，某些网站被以SNI阻断的方式Ban了~</p>
+<p>从墙墙ちゃん毒害网络的方式来看，有DNS污染、封IP和端口和TCP连接重置等。下图的“连接已重置”就很有可能是遇到TCP连接重置了。</p>
+<p><a href="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/image-20200306170312677.png" data-caption="img" data-fancybox="images"><img src="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/image-20200306170312677.png" alt="img"></a></p>
+<p>受到TCP连接重置影响的知名网站有：</p>
+<ul>
+<li>维基百科</li>
+<li>维基语录</li>
+<li>Reddit</li>
+<li>Steam社区</li>
+<li>Pixiv</li>
+<li>Archive of Our Own</li>
+<li>……</li>
+</ul>
+<p>域前置针对的就是TCP连接重置（SNI阻断）ヾ(•ω•`)o</p>
+<p>这篇博文讲解的域前置的实现方式是Nginx本地反向代理ヾ(^▽^*)))</p>
+<p>在干活之前，我们有必要了解一下法律条文，做一个学法懂法用法的好公民~</p>
+<blockquote>
+<p><a href="http://www.jiangsu.gov.cn/xxgk/project/P0201605/P020160511/P020160511651613750850.pdf" target="_blank" rel="noopener">《中华人民共和国计算机信息网络国际联网管理暂行规定》</a></p>
+<p>第六条　计算机信息网络直接进行国际联网，必须使用邮电部国家公用电信网提供的国际出入口信道。任何单位和个人不得自行建立或者使用其他信道进行国际联网。</p>
+</blockquote>
+<p>引用<a href="https://steemit.com/cn/@v2ray/sni" target="_blank" rel="noopener">一篇博文</a>的讲解：本地的 客户端拦截浏览器的 TLS 连接，让浏览器以为自己已经连上了目标服务器，读取 TLS 中承载的 HTTP 数据；然后自己与目标服务器建立一个新的 TLS 连接，把 HTTP 数据发过去。也就是说，您<strong>不需要代理服务器</strong>。</p>
+<p>我们今天讲的Nginx<strong>本地</strong>反代，是<strong>本地反向代理</strong>，并没有自行建立信道进行国际联网，<del>并没有推倒墙娘</del>，我们的流量依然是走国家公用电信网的，所以这种方式完全合法！</p>
+<h2><span id="详细步骤">详细步骤</span><a class="post-anchor" href="#undefined"></a></h2><p>那么废话不多说，赶紧开始吧~</p>
+<ol>
+<li>退出杀毒软件。我电脑上的ESET居然报毒了……不确定国内的杀软会不会报毒，总之退出了肯定没问题……</li>
+<li>下载<ruby>GitHub<rp> (</rp><rt>GayHub</rt><rp>) </rp></ruby>上的<a href="https://github.com/mashirozx/Pixiv-Nginx" target="_blank" rel="noopener">Pixiv-Nginx</a>项目并解压：</li>
+</ol>
+<blockquote>
+<ul>
+<li><a href="https://github.com/mashirozx/Pixiv-Nginx/archive/master.zip" target="_blank" rel="noopener">GitHub下载直链</a></li>
+<li><a href="https://gitee.com/mashirozx/Pixiv-Nginx" target="_blank" rel="noopener">码云镜像（需登录）</a></li>
+</ul>
+<p>两者二选一，推荐使用GitHub</p>
+</blockquote>
+<p>注意，解压的路径不能包含任何非英文字符！不能放在诸如“新建文件夹”之类的中文路径里，不然无法正常使用！</p>
+<ol>
+<li>安装证书。我们解压出来的文档中有一个名为”ca.cer” 的文件，我们双击打开它，然后按下图步骤操作：</li>
+</ol>
+<p><a href="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(2).jpg" data-caption="img" data-fancybox="images"><img src="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(2).jpg" alt="img"></a></p>
+<p><em>点击查看大图步骤</em></p>
+<ol>
+<li><p>修改Hosts文件。转到C:\Windows\System32\drivers\etc路径。使用我们下载的文件目录中的“hosts”文件替换掉C:\Windows\System32\drivers\etc 下的hosts。</p>
+</li>
+<li><p>启动Nginx。双击打开“4.可视化工具（这个操作简单）.exe”，给予管理员权限（允许此应用对您的设备进行修改）。点击“Nginx”后面的“Start”按钮。<a href="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(1).jpg" data-caption="img" data-fancybox="images"><img src="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(1).jpg" alt="img"></a></p>
+<p>同意穿过防火墙</p>
+<p><a href="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(1).png" data-caption="img" data-fancybox="images"><img src="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(1).png" alt="img"></a></p>
+<p>这时文本标签“Nginx”前的红叉会变成绿勾。</p>
+</li>
+<li><p>刷新DNS缓存。先关闭您所有开启的浏览器窗口。随后同时按住键盘上的“Windows键”和字母“R”键，在弹出的窗口中输入“cmd”并键入回车。在弹出的“命令提示符”窗口中输入命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<p>请注意，ipconfig后有一个空格。然后键入回车。您会看到提示：</p>
+<blockquote>
+<p>Windows IP 配置</p>
+<p>已成功刷新 DNS 解析缓存。</p>
+</blockquote>
+</li>
+</ol>
+<p>大功告成！</p>
+<p>恭喜您，您已经成功使用了Nginx进行本地反代。这时您已经可以访问AO3、Pixiv、Steam社区和维基百科。赶紧试试您想访问的网页吧。</p>
+<p>如果您想关闭服务，只需要点击步骤4中的“Stop”按钮。</p>
+<p>重新启动电脑和，您需要重复步骤4和步骤5重新启动服务。如果您想开机自动启动服务，请把目录下的“nginx.exe”设为开机启动。具体设置方法请自行百度。</p>
+<h2><span id="鸣谢">鸣谢</span><a class="post-anchor" href="#undefined"></a></h2><ul>
+<li><a href="https://github.com/mashirozx/Pixiv-Nginx" target="_blank" rel="noopener">Pixiv-Nginx</a>的开发者<a href="https://github.com/mashirozx" target="_blank" rel="noopener">@Mashiro</a> 和他的博客</li>
+<li><a href="https://github.com/mashirozx/Pixiv-Nginx" target="_blank" rel="noopener">Pixiv-Nginx</a>的其他贡献者</li>
+<li>Nginx项目</li>
+<li>维基百科编辑者</li>
+<li>方<ruby>教授<rp> (</rp><rt>dà lǎo</rt><rp>) </rp></ruby>和<ruby>墙娘<rp> (</rp><rt>GFW</rt><rp>) </rp></ruby></li>
+<li>屏幕前的您</li>
+</ul>
+<h2><span id="更多">更多</span><a class="post-anchor" href="#undefined"></a></h2><ul>
+<li>如果您在启用Nginx的时候遇到了其他困难，不妨看看下载文件中附带的几张图片，也可以在评论区留言向我提问。</li>
+<li>如果您想这个工具支持更多的站点，不妨亲自动手编写规则并Pull Request。</li>
+<li>如果您想进一步了解域前置的原理，不妨阅读维基百科相关条目。</li>
+</ul>
+
+
+  
+    <div class="post-reward">
+    <div id="reward-button">打赏</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
+              支付宝
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
+              微信
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2020/03/03/【简体中文镜像】魔法少女小圆-内容考据/">【简体中文镜像】魔法少女小圆  内容考据</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者（也许是搬运者？）：<a href="https://www.hee.ink">ZeroSimple</a>
+    </div>
+    <div class="link">
+      本文链接：<a href="https://www.hee.ink/2020/03/06/域前置（Domain-fronting）傻瓜教程/">https://www.hee.ink/2020/03/06/域前置（Domain-fronting）傻瓜教程/</a>
+    </div>
+    <div class="declare">
+      如果这篇文章是原创的，那么版权所有哦，如需转载请留言向我取得授权；如果本文是搬运的话，请联系本文的原作者哦~
+    </div>
+	<div class="qb">
+	  ／人◕ ‿‿ ◕人＼「僕と契約して、ポーターになってよ！」
+	</div>
+  </div>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2020
+            <a href="https://www.hee.ink">ZeroSimple</a> Powered by <a href="https://hexo.io">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<%= theme.gtm_id %>" height="0" width="0" style="display:none;visibility:hidden">
+                </iframe></noscript>
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"3oMgwu8w5l2uGD0PnodoIoB6-MdYXbMMI\",\"API_KEY\":\"Bcj8p5Xf3hIPdxgpAm2OwKTY\"},\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2011/4/7\",\"site_id\":\"14310646\",\"access_token\":\"21.fc8a0b9b49c5610415ed2a2c22df2f6d.2592000.1585913731.2318143093-18153841\"}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 
