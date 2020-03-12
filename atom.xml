@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hee.ink/"/>
-  <updated>2020-03-10T09:38:43.482Z</updated>
+  <updated>2020-03-12T11:18:08.571Z</updated>
   <id>https://www.hee.ink/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 10 1903/1909 SMBv3协议出现高危漏洞</title>
+    <link href="https://www.hee.ink/2020/03/12/Windows-10-1903-1909-SMBv3%E5%8D%8F%E8%AE%AE%E5%87%BA%E7%8E%B0%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E/"/>
+    <id>https://www.hee.ink/2020/03/12/Windows-10-1903-1909-SMBv3%E5%8D%8F%E8%AE%AE%E5%87%BA%E7%8E%B0%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E/</id>
+    <published>2020-03-12T11:15:42.000Z</published>
+    <updated>2020-03-12T11:18:08.571Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;又闻到了浓郁的香味~ 今日份的微软药丸~ &lt;/p&gt;
+&lt;p&gt;一直都说”为了保证安全，请升级到最新的操作系统“，结果这次是最新的系统才受影响😂&lt;/p&gt;
+&lt;p&gt;不过这是因为1903引入了SMBv3协议导致，这种情况也是偶然现象，我依然推荐大家实时升级到最新的操作系统，尤其是要及
+      
+    
+    </summary>
+    
+    
+    
+      <category term="安全" scheme="https://www.hee.ink/tags/%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx本地反向代理傻瓜教程</title>
