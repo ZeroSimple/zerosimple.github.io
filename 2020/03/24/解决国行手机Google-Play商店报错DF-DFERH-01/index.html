@@ -27,7 +27,7 @@
     <meta name="description" content="Save digital memory forever 永远保存数字记忆。这里有Android生态的小杂谈，这里有我关于互联网的小笔记，折腾不止；当然也有ACG。">
     
     <title>
-      Windows 10 1903/1909 SMBv3协议出现高危漏洞 - Eternal digital memory - 永恒的数字记忆
+      解决国行手机Google Play商店报错DF-DFERH-01 - Eternal digital memory - 永恒的数字记忆
     </title>
     <link rel="manifest" href="/manifest.json">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -36,11 +36,6 @@
 </head>
   <body>
     <canvas id="pagemap"></canvas>
-    
-    <div id="post-toc" class="animated hiddenToc hide">
-      <span class="title">Toc</span>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">受影响的系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">微软对此次事件的说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">临时解决方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">参考资料</span></a></li></ol>
-    </div>
     
     <div id="fixed-menu-wrap">
       <span class="iconfont icon-sousuo search-box menu-reset"></span>
@@ -161,15 +156,15 @@
         <article class="post-entry">
     <div class="header">
       
-      <div class="title">Windows 10 1903/1909 SMBv3协议出现高危漏洞</div>
+      <div class="title">解决国行手机Google Play商店报错DF-DFERH-01</div>
       <div class="meta">
         <span class="item">
           <span class="iconfont icon-time-circle"></span>
-          <span>2020/03/12</span>
+          <span>2020/03/24</span>
         </span>
 
         
-          <span class="item leancloud-visitors" id="/2020/03/12/Windows-10-1903-1909-SMBv3协议出现高危漏洞/" data-flag-title="Windows 10 1903/1909 SMBv3协议出现高危漏洞">
+          <span class="item leancloud-visitors" id="/2020/03/24/解决国行手机Google-Play商店报错DF-DFERH-01/" data-flag-title="解决国行手机Google Play商店报错DF-DFERH-01">
             <span class="iconfont icon-eye1"></span>
             <span class="leancloud-visitors-count"></span>
           </span>
@@ -183,7 +178,7 @@
             <span>
                 
                   
-                    <a href="/tags/安全">安全</a>
+                    <a href="/tags/教程">教程</a>
                   
                 
             </span>
@@ -193,50 +188,7 @@
       <div>
       </div>
     </div>
-    <p>又闻到了浓郁的香味~ 今日份的微软药丸~ </p>
-<p>一直都说”为了保证安全，请升级到最新的操作系统“，结果这次是最新的系统才受影响😂</p>
-<p>不过这是因为1903引入了SMBv3协议导致，这种情况也是偶然现象，我依然推荐大家实时升级到最新的操作系统，尤其是要及时安装安全补丁。</p>
-<h2><span id="受影响的系统">受影响的系统</span><a class="post-anchor" href="#undefined"></a></h2><table>
-<thead>
-<tr>
-<th>Windows 10 Version 1903 for 32-bit Systems</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Windows 10 Version 1903 for x64-based Systems</td>
-</tr>
-<tr>
-<td>Windows 10 Version 1903 for ARM64-based Systems</td>
-</tr>
-<tr>
-<td>Windows Server, version 1903 (Server Coreinstallation)</td>
-</tr>
-<tr>
-<td>Windows 10 Version 1909 for 32-bit Systems</td>
-</tr>
-<tr>
-<td>Windows 10 Version 1909 for x64-based Systems</td>
-</tr>
-<tr>
-<td>Windows 10 Version 1909 for ARM64-based Systems</td>
-</tr>
-<tr>
-<td>Windows Server, version 1909 (Server Coreinstallation)</td>
-</tr>
-</tbody></table>
-<h2><span id="微软对此次事件的说明">微软对此次事件的说明</span><a class="post-anchor" href="#undefined"></a></h2><blockquote>
-<p>Microsoft is aware of a remote code execution vulnerability in the way that the Microsoft Server Message Block 3.1.1 (SMBv3) protocol handles certain requests. An attacker who successfully exploited the vulnerability could gain the ability to execute code on the target SMB Server or SMB Client.</p>
-<p>To exploit the vulnerability against an SMB Server, an unauthenticated attacker could send a specially crafted packet to a targeted SMBv3 Server. To exploit the vulnerability against an SMB Client, an unauthenticated attacker would need to configure a malicious SMBv3 Server and convince a user to connect to it.</p>
-<p>We will update this advisory when updates are available. If you wish to be notified when this advisory is updated, we recommend that you register for the security notifications mailer to be alerted of content changes to this advisory. See <a href="https://www.microsoft.com/en-us/msrc/technical-security-notifications?rtc=1" target="_blank" rel="noopener">Microsoft Technical Security Notifications</a>.</p>
-</blockquote>
-<h2><span id="临时解决方法">临时解决方法</span><a class="post-anchor" href="#undefined"></a></h2><p>PowerShell管理员权限执行命令禁用 SMBv3 压缩：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ItemProperty -Path &quot;HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters&quot; DisableCompression -Type DWORD -Value 1 -Force</span><br></pre></td></tr></table></figure>
-
-<p>其实就是改了一个注册表，自行到注册表编辑器改也没问题。</p>
-<p>撤销禁用指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ItemProperty -Path &quot;HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters&quot; DisableCompression -Type DWORD -Value 0 -Force</span><br></pre></td></tr></table></figure>
-
-<h2><span id="参考资料">参考资料</span><a class="post-anchor" href="#undefined"></a></h2><p><a href="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV200005" target="_blank" rel="noopener">https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV200005</a></p>
+    <p>在路由器或者手机的的代理设置中把googleapis.cn加入强制走代理的黑名单就行。</p>
 
 
   
@@ -263,6 +215,8 @@
   <div class="post-guide">
     <div class="item left">
         
+          <a href="/2020/03/29/Pure-AQUAPLUS-LEGEND-OF-ACOUSTICS-信息全整理/">Pure -AQUAPLUS LEGEND OF ACOUSTICS- 信息全整理</a>
+        
     </div>
     <div class="item right">
         
@@ -278,7 +232,7 @@
       本文作者（也许是搬运者？）：<a href="https://www.hee.ink">ZeroSimple</a>
     </div>
     <div class="link">
-      本文链接：<a href="https://www.hee.ink/2020/03/12/Windows-10-1903-1909-SMBv3协议出现高危漏洞/">https://www.hee.ink/2020/03/12/Windows-10-1903-1909-SMBv3协议出现高危漏洞/</a>
+      本文链接：<a href="https://www.hee.ink/2020/03/24/解决国行手机Google-Play商店报错DF-DFERH-01/">https://www.hee.ink/2020/03/24/解决国行手机Google-Play商店报错DF-DFERH-01/</a>
     </div>
     <div class="declare">
       如果这篇文章是原创的，那么版权所有哦，如需转载请留言向我取得授权；如果本文是搬运的话，请联系本文的原作者哦~
@@ -303,7 +257,7 @@
         </footer>
       </div>
     </div>
-  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-hijiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<%= theme.gtm_id %>" height="0" width="0" style="display:none;visibility:hidden">
                 </iframe></noscript>
 </html>
