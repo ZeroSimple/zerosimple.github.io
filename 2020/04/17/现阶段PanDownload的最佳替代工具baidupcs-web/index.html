@@ -27,7 +27,7 @@
     <meta name="description" content="Save digital memory forever 永远保存数字记忆。这里有Android生态的小杂谈，这里有我关于互联网的小笔记，折腾不止；当然也有ACG。">
     
     <title>
-      Nginx本地反向代理傻瓜教程 - Eternal digital memory - 永恒的数字记忆
+      现阶段PanDownload的最佳替代工具baidupcs-web - Eternal digital memory - 永恒的数字记忆
     </title>
     <link rel="manifest" href="/manifest.json">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -39,7 +39,7 @@
     
     <div id="post-toc" class="animated hiddenToc hide">
       <span class="title">Toc</span>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">详细步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">鸣谢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">更多</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">安全相关</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">鸣谢</span></a></li></ol>
     </div>
     
     <div id="fixed-menu-wrap">
@@ -161,15 +161,15 @@
         <article class="post-entry">
     <div class="header">
       
-      <div class="title">Nginx本地反向代理傻瓜教程</div>
+      <div class="title">现阶段PanDownload的最佳替代工具baidupcs-web</div>
       <div class="meta">
         <span class="item">
           <span class="iconfont icon-time-circle"></span>
-          <span>2020/03/06</span>
+          <span>2020/04/17</span>
         </span>
 
         
-          <span class="item leancloud-visitors" id="/2020/03/06/Nginx本地反向代理傻瓜教程/" data-flag-title="Nginx本地反向代理傻瓜教程">
+          <span class="item leancloud-visitors" id="/2020/04/17/现阶段PanDownload的最佳替代工具baidupcs-web/" data-flag-title="现阶段PanDownload的最佳替代工具baidupcs-web">
             <span class="iconfont icon-eye1"></span>
             <span class="leancloud-visitors-count"></span>
           </span>
@@ -193,90 +193,34 @@
       <div>
       </div>
     </div>
-    <p>众所周知，某些网站被以SNI阻断的方式Ban了~</p>
-<p>从墙墙ちゃん毒害网络的方式来看，有DNS污染、封IP和端口和TCP连接重置等。下图的“连接已重置”就很有可能是遇到TCP连接重置了。</p>
-<p><a href="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/image-20200306170312677.png" data-caption="img" data-fancybox="images"><img src="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/image-20200306170312677.png" alt="img"></a></p>
-<p>受到TCP连接重置影响的知名网站有：</p>
-<ul>
-<li>维基百科</li>
-<li>维基语录</li>
-<li>Reddit</li>
-<li>Steam社区</li>
-<li>Pixiv</li>
-<li>Archive of Our Own</li>
-<li>……</li>
-</ul>
-<p>Nginx本地反向代理针对的就是TCP连接重置（SNI阻断）ヾ(•ω•`)o</p>
-<p>在干活之前，我们有必要了解一下法律条文，做一个学法懂法用法的好公民~</p>
+    <p>话说在前，先Fork再看文。</p>
+<p>原仓库：<a href="https://github.com/Erope/baidupcs-web" target="_blank" rel="noopener">https://github.com/Erope/baidupcs-web</a></p>
+<p>我Fork的仓库：<a href="https://github.com/ZeroSimple/baidupcs-web" target="_blank" rel="noopener">https://github.com/ZeroSimple/baidupcs-web</a></p>
+<p>Fork后自行到Release页下载自己合适的版本即可。</p>
+<p>总所周知的原因，PanDownload 的作者被抓了。Android 版本的其实是第三方维护的（作者似乎是个高中生），这次被抓的是原版作者，Android 的维护者已经在酷安报平安了。</p>
+<p>先上效果图：</p>
+<p><a href="https://github.com/ZeroSimple/images/raw/master/bdnetdisk/baidupcs-web.png" data-caption="baidupcs-web" data-fancybox="images"><img src="https://github.com/ZeroSimple/images/raw/master/bdnetdisk/baidupcs-web.png" alt="baidupcs-web"></a></p>
+<p><a href="https://github.com/ZeroSimple/images/raw/master/bdnetdisk/bdy.png" data-caption="bdy" data-fancybox="images"><img src="https://github.com/ZeroSimple/images/raw/master/bdnetdisk/bdy.png" alt="bdy"></a></p>
 <blockquote>
-<p><a href="http://www.jiangsu.gov.cn/xxgk/project/P0201605/P020160511/P020160511651613750850.pdf" target="_blank" rel="noopener">《中华人民共和国计算机信息网络国际联网管理暂行规定》</a></p>
-<p>第六条　计算机信息网络直接进行国际联网，必须使用邮电部国家公用电信网提供的国际出入口信道。任何单位和个人不得自行建立或者使用其他信道进行国际联网。</p>
+<p>百度是针对账号进行限速，当一个非会员账号下载量达到一定阈值就会触发限速。账号被限速之后容易出现下载错误、掉连接数等问题，需要过几天或者开通会员才会恢复。</p>
 </blockquote>
-<p>引用<a href="https://steemit.com/cn/@v2ray/sni" target="_blank" rel="noopener">一篇博文</a>的讲解：本地的 客户端拦截浏览器的 TLS 连接，让浏览器以为自己已经连上了目标服务器，读取 TLS 中承载的 HTTP 数据；然后自己与目标服务器建立一个新的 TLS 连接，把 HTTP 数据发过去。也就是说，您<strong>不需要代理服务器</strong>。</p>
-<p>我们今天讲的Nginx<strong>本地</strong>反代，是<strong>本地反向代理</strong>，并没有自行建立信道进行国际联网，<del>并没有推倒墙娘</del>，我们的流量依然是走国家公用电信网的，所以这种方式完全合法！</p>
-<h2><span id="详细步骤">详细步骤</span><a class="post-anchor" href="#undefined"></a></h2><p>那么废话不多说，赶紧开始吧~</p>
-<ol>
-<li>退出杀毒软件。我电脑上的ESET居然报毒了……不确定国内的杀软会不会报毒，总之退出了肯定没问题……</li>
-<li>下载<ruby>GitHub<rp> (</rp><rt>GayHub</rt><rp>) </rp></ruby>上的<a href="https://github.com/mashirozx/Pixiv-Nginx" target="_blank" rel="noopener">Pixiv-Nginx</a>项目并解压：</li>
-</ol>
-<blockquote>
-<ul>
-<li><a href="https://github.com/mashirozx/Pixiv-Nginx/archive/master.zip" target="_blank" rel="noopener">GitHub下载直链</a></li>
-<li><a href="https://gitee.com/mashirozx/Pixiv-Nginx" target="_blank" rel="noopener">码云镜像（需登录）</a></li>
-</ul>
-<p>两者二选一，推荐使用GitHub</p>
-</blockquote>
-<p>注意，解压的路径不能包含任何非英文字符！不能放在诸如“新建文件夹”之类的中文路径里，不然无法正常使用！</p>
-<ol>
-<li>安装证书。我们解压出来的文档中有一个名为”ca.cer” 的文件，我们双击打开它，然后按下图步骤操作：</li>
-</ol>
-<p><a href="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(2).jpg" data-caption="img" data-fancybox="images"><img src="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(2).jpg" alt="img"></a></p>
-<p><em>点击查看大图步骤</em></p>
-<ol>
-<li><p>修改Hosts文件。转到C:\Windows\System32\drivers\etc路径。使用我们下载的文件目录中的“hosts”文件替换掉C:\Windows\System32\drivers\etc 下的hosts。</p>
-</li>
-<li><p>启动Nginx。双击打开“4.可视化工具（这个操作简单）.exe”，给予管理员权限（允许此应用对您的设备进行修改）。点击“Nginx”后面的“Start”按钮。<a href="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(1).jpg" data-caption="img" data-fancybox="images"><img src="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(1).jpg" alt="img"></a></p>
-<p>同意穿过防火墙</p>
-<p><a href="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(1).png" data-caption="img" data-fancybox="images"><img src="https://raw.githubusercontent.com/ZeroSimple/images/master/domain_fronting/df%20(1).png" alt="img"></a></p>
-<p>这时文本标签“Nginx”前的红叉会变成绿勾。</p>
-</li>
-<li><p>刷新DNS缓存。先关闭您所有开启的浏览器窗口。随后同时按住键盘上的“Windows键”和字母“R”键，在弹出的窗口中输入“cmd”并键入回车。在弹出的“命令提示符”窗口中输入命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+<p>经过我的实际测试，下载后期会出现间歇性的0Kb/s ，需要耐心等待。不过前期速度挺快的，大约有3M/s. </p>
+<p>Windows 版本的话直接运行EXE就行，会自动跳转到Localhost页面。如果没有跳转，请在浏览器地址栏输入：<a href="http://localhost:5299/" target="_blank" rel="noopener">http://localhost:5299/</a></p>
+<p><strong>Tip：请务必解压后使用，不要在压缩包里直接运行，不然会导致下载的文件丢失！</strong></p>
+<p>macOS &amp; Linux 用户需要设置权限后使用：</p>
+<p>先cd到文件目录，然后</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod a+x BaiduPCS-Go</span><br><span class="line">./BaiduPCS-Go</span><br></pre></td></tr></table></figure>
 
-<p>请注意，ipconfig后有一个空格。然后键入回车。您会看到提示：</p>
-<blockquote>
-<p>Windows IP 配置</p>
-<p>已成功刷新 DNS 解析缓存。</p>
-</blockquote>
-</li>
-</ol>
-<p>大功告成！</p>
-<p>恭喜您，您已经成功使用了Nginx进行本地反代。这时您已经可以访问AO3、Pixiv、Steam社区和维基百科。赶紧试试您想访问的网页吧。</p>
-<p>如果您想关闭服务，只需要点击步骤4中的“Stop”按钮。</p>
-<p>重新启动电脑和，您需要重复步骤4和步骤5重新启动服务。如果您想开机自动启动服务，请把目录下的“nginx.exe”设为开机启动。具体设置方法请自行百度。</p>
+<p>浏览器输入：localhost:5299</p>
+<p>Enjoy it! </p>
+<p>另外，据这个Fix版的作者说，arm版本似乎用不了。</p>
 <h2><span id="鸣谢">鸣谢</span><a class="post-anchor" href="#undefined"></a></h2><ul>
-<li><a href="https://github.com/mashirozx/Pixiv-Nginx" target="_blank" rel="noopener">Pixiv-Nginx</a>的开发者<a href="https://github.com/mashirozx" target="_blank" rel="noopener">@Mashiro</a> </li>
-<li>Pixiv-Nginx的其他<a href="https://github.com/mashirozx/Pixiv-Nginx/graphs/contributors" target="_blank" rel="noopener">贡献者</a></li>
-<li>Nginx项目</li>
-<li>维基百科编辑者</li>
-<li>学富五车的方教授、令人怜惜的墙娘和为保护青少年身心健康而不懈奋斗的<ruby>热心网友<rp> (</rp><rt>jiàn pán dà xiá</rt><rp>) </rp></ruby></li>
-<li>屏幕前的您</li>
+<li>@<a href="https://github.com/iikira/BaiduPCS-Go/commits?author=iikira" target="_blank" rel="noopener">iikira</a> 的<a href="https://github.com/iikira/BaiduPCS-Go" target="_blank" rel="noopener">BaiduPCS-Go</a></li>
+<li>@<a href="https://github.com/liuzhuoling2011" target="_blank" rel="noopener">liuzhuoling2011</a> 的<a href="https://github.com/liuzhuoling2011/baidupcs-web" target="_blank" rel="noopener">baidupcs-web</a></li>
+<li>@<a href="https://github.com/Erope" target="_blank" rel="noopener">Erope</a> 的<a href="https://github.com/Erope/baidupcs-web" target="_blank" rel="noopener">baidupcs-web</a> Fix版本</li>
+<li>其他贡献者</li>
 </ul>
-<h2><span id="更多">更多</span><a class="post-anchor" href="#undefined"></a></h2><ul>
-<li>如果您在启用Nginx的时候遇到了其他困难，不妨看看下载文件中附带的几张图片，也可以在评论区留言向我提问。</li>
-<li>如果您想这个工具支持更多的站点，不妨亲自动手编写规则并Pull Request。</li>
-<li>如果您想进一步了解相关原理，不妨阅读维基百科。</li>
-</ul>
-<h2><span id="安全相关">安全相关</span><a class="post-anchor" href="#undefined"></a></h2><p>本项目使用的证书是<a href="https://github.com/mashirozx" target="_blank" rel="noopener">@Mashiro</a>签的，我不能保证证书的100%安全，存在中间人攻击的风险，本人不承担使用这个项目所造成任何损失的责任。你的Pixiv、维基百科和AO3账号及密码可能遭到劫持，其他并非通过本项目反向代理的网站安全性则不受影响。</p>
-<p>然而Mashiro和我都认为这几个网站没啥中间人攻击的价值~ 又不能恰钱~ 而且Mashiro也说如果证书有问题可以“顺着网线过来打我”……一般来说普通网友不会做这样的坏事，大体上请放心使用我这个方法，我只是声明一下不承担责任 &amp; 科普。</p>
-<p>如果你担心安全问题，可以考虑自己生成一个证书。如果你不会生成证书，可以考虑通过以下手段保护自己的隐私：</p>
-<ul>
-<li>使用小号访问Pixiv、维基百科和AO3</li>
-<li>不安装证书，每次访问的时候点一下不安全仍然访问（但是可能出现图片无法访问的现象）</li>
-<li>找一个你信得过的懂技术的朋友，让Ta帮忙签发一个</li>
-</ul>
-<p><a href="[https://github.com/mashirozx/Pixiv-Nginx/blob/master/6.%E5%AE%89%E5%85%A8%E5%8F%8A%E9%9A%90%E7%A7%81%E5%A3%B0%E6%98%8E.txt](https://github.com/mashirozx/Pixiv-Nginx/blob/master/6.安全及隐私声明.txt)">点击此处</a>查看<a href="https://github.com/mashirozx" target="_blank" rel="noopener">@Mashiro</a>的安全声明</p>
-<p>总之，不必过分担心，快乐上网冲浪就好( •̀ ω •́ )✧</p>
+<p>希望PanDownload 的作者平安。</p>
 
 
   
@@ -303,12 +247,10 @@
   <div class="post-guide">
     <div class="item left">
         
-          <a href="/2020/03/24/解决国行手机Google-Play商店报错DF-DFERH-01/">解决国行手机Google Play商店报错DF-DFERH-01</a>
-        
     </div>
     <div class="item right">
         
-          <a href="/2020/03/03/【简体中文镜像】魔法少女小圆-内容考据/">【简体中文镜像】魔法少女小圆  内容考据</a>
+          <a href="/2020/03/29/Pure-AQUAPLUS-LEGEND-OF-ACOUSTICS-信息全整理/">Pure -AQUAPLUS LEGEND OF ACOUSTICS- 信息全整理</a>
         
     </div>
   </div>
@@ -320,7 +262,7 @@
       本文作者（也许是搬运者？）：<a href="https://www.hee.ink">ZeroSimple</a>
     </div>
     <div class="link">
-      本文链接：<a href="https://www.hee.ink/2020/03/06/Nginx本地反向代理傻瓜教程/">https://www.hee.ink/2020/03/06/Nginx本地反向代理傻瓜教程/</a>
+      本文链接：<a href="https://www.hee.ink/2020/04/17/现阶段PanDownload的最佳替代工具baidupcs-web/">https://www.hee.ink/2020/04/17/现阶段PanDownload的最佳替代工具baidupcs-web/</a>
     </div>
     <div class="declare">
       如果这篇文章是原创的，那么版权所有哦，如需转载请留言向我取得授权；如果本文是搬运的话，请联系本文的原作者哦~
