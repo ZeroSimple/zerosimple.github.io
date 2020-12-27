@@ -1,0 +1,15 @@
+{ 
+"name" : "蒟蒻的博客" , 
+"short_name" : 蒟蒻的博客" , 
+"display" : "standalone" , 
+"start_url" : "/" , 
+"theme_color" : "#f7f7f7" , 
+"background_color" : "#f7f7f7" , 
+"icons" : [ 
+  {
+    "src": "images/logo.jpeg",
+    "sizes": "256x256",
+    "type": "image/webp"
+  }
+ ] 
+}
