@@ -109,7 +109,7 @@
 
   <url>
     <loc>https://hee.ink/</loc>
-    <lastmod>2021-01-01</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -117,14 +117,14 @@
   
   <url>
     <loc>https://hee.ink/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-01-01</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hee.ink/tags/ACG/</loc>
-    <lastmod>2021-01-01</lastmod>
+    <lastmod>2021-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
